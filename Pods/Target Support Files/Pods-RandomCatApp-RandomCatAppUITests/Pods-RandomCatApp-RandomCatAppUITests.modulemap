@@ -1,0 +1,6 @@
+framework module Pods_RandomCatApp_RandomCatAppUITests {
+  umbrella header "Pods-RandomCatApp-RandomCatAppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,26 @@
+PODS:
+  - Kingfisher (7.12.0)
+  - R.swift (7.3.2)
+  - SVProgressHUD (2.3.1):
+    - SVProgressHUD/Core (= 2.3.1)
+  - SVProgressHUD/Core (2.3.1)
+
+DEPENDENCIES:
+  - Kingfisher (~> 7.0)
+  - R.swift (~> 7.3.2)
+  - SVProgressHUD (~> 2.3.1)
+
+SPEC REPOS:
+  trunk:
+    - Kingfisher
+    - R.swift
+    - SVProgressHUD
+
+SPEC CHECKSUMS:
+  Kingfisher: 53a10ea35051a436b5fb626ca2dd8f3144d755e9
+  R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
+  SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
+
+PODFILE CHECKSUM: e6e2ceeb14c63cc2de38a54db7baa7e5dd4b3ff0
+
+COCOAPODS: 1.15.2
