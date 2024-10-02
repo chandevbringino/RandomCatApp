@@ -11,6 +11,7 @@ target 'RandomCatApp' do
   pod 'Kingfisher', '~> 7.0'
   pod 'R.swift', '~> 7.3.2'
   pod 'SVProgressHUD', '~> 2.3.1'
+  pod 'lottie-ios', '~> 4.4.3'
 
   target 'RandomCatAppTests' do
     inherit! :search_paths

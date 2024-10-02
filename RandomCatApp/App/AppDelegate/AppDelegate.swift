@@ -19,12 +19,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
         
-        let vc = R.storyboard.catDetails.catDetailsController()!
-        vc.viewModel = CatDetailsViewModel()
+        let vc = R.storyboard.splashScreen.splashScreenController()!
         
-        let nc = UINavigationController(rootViewController: vc)
-        
-        window?.rootViewController = nc
+        window?.rootViewController = vc
         window?.makeKeyAndVisible()
         
         return true

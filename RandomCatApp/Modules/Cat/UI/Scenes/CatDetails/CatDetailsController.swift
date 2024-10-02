@@ -12,7 +12,9 @@ import SVProgressHUD
 class CatDetailsController: UIViewController {
     var viewModel: CatDetailsViewModelProtocol!
     
+    @IBOutlet private(set) var backgroundGradientView: Gradient!
     @IBOutlet private(set) var catImageView: UIImageView!
+    @IBOutlet private(set) var labelView: UIView!
     @IBOutlet private(set) var catFactLabel: UILabel!
 }
 
@@ -29,14 +31,18 @@ extension CatDetailsController {
 
 private extension CatDetailsController {
     func setup() {
-        setupImageView()
+        setupViews()
         setupGesture()
         
+        labelView.isHidden = true
         fetchCatDetails()
     }
     
-    func setupImageView() {
-        catImageView.layer.cornerRadius = 8
+    func setupViews() {
+        catImageView.layer.cornerRadius = 10
+        labelView.layer.cornerRadius = 10
+        labelView.layer.borderColor = UIColor.black.cgColor
+        labelView.layer.borderWidth = 1
     }
     
     func setupGesture() {
@@ -47,16 +53,22 @@ private extension CatDetailsController {
         tapGesture.numberOfTapsRequired = 1
         view.addGestureRecognizer(tapGesture)
     }
+    
+    func setupGradientColor() {
+        backgroundGradientView.startColor = getRandomColor()
+        backgroundGradientView.endColor = getRandomColor()
+    }
 }
 
 // MARK: - Refresh
 
 private extension CatDetailsController {
     func refresh() {
-        DispatchQueue.main.async {
-            self.catImageView.kf.setImage(with: self.viewModel.catImageURL)
-            self.catFactLabel.text = self.viewModel.catFact
-        }
+        labelView.isHidden = false
+        
+        setupGradientColor()
+        catImageView.kf.setImage(with: viewModel.catImageURL)
+        catFactLabel.text = viewModel.catFact
     }
 }
 
@@ -79,16 +91,6 @@ private extension CatDetailsController {
             onError: handleGetCatDetailsError()
         )
     }
-    
-    func showAlertMessage(title: String?, message: String?) {
-        let alert = UIAlertController(
-            title: title,
-            message: message,
-            preferredStyle: .alert
-        )
-        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
-        present(alert, animated: true)
-    }
 }
 
 // MARK: - Handlers
@@ -98,7 +100,9 @@ private extension CatDetailsController {
         { [weak self] in
             guard let self else { return }
             SVProgressHUD.dismiss()
-            self.refresh()
+            DispatchQueue.main.async {
+                self.refresh()
+            }
         }
     }
     
@@ -111,5 +115,26 @@ private extension CatDetailsController {
                 message: error.localizedDescription
             )
         }
+    }
+}
+
+// MARK: - Helpers
+
+private extension CatDetailsController {
+    func getRandomColor() -> UIColor {
+        let red = CGFloat.random(in: 0...1)
+        let green = CGFloat.random(in: 0...1)
+        let blue = CGFloat.random(in: 0...1)
+        return UIColor(red: red, green: green, blue: blue, alpha: 1.0)
+    }
+    
+    func showAlertMessage(title: String?, message: String?) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        alert.addAction(UIAlertAction(title: "OK", style: .cancel))
+        present(alert, animated: true)
     }
 }

@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (5.9.1)
   - Kingfisher (7.12.0)
+  - lottie-ios (4.4.3)
   - R.swift (7.3.2)
   - SVProgressHUD (2.3.1):
     - SVProgressHUD/Core (= 2.3.1)
@@ -9,6 +10,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 5.9.1)
   - Kingfisher (~> 7.0)
+  - lottie-ios (~> 4.4.3)
   - R.swift (~> 7.3.2)
   - SVProgressHUD (~> 2.3.1)
 
@@ -16,15 +18,17 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - Kingfisher
+    - lottie-ios
     - R.swift
     - SVProgressHUD
 
 SPEC CHECKSUMS:
   Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
   Kingfisher: 53a10ea35051a436b5fb626ca2dd8f3144d755e9
+  lottie-ios: fcb5e73e17ba4c983140b7d21095c834b3087418
   R.swift: 0af0d882f49f03711415cb4e5215daa977d8a480
   SVProgressHUD: 4837c74bdfe2e51e8821c397825996a8d7de6e22
 
-PODFILE CHECKSUM: 11929816d6764690cd074237b324cef9c07317d3
+PODFILE CHECKSUM: f4efad4dbceacc3e04f43ccfe773fadf134df360
 
 COCOAPODS: 1.15.2

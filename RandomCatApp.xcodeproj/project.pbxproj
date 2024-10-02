@@ -31,6 +31,10 @@
 		6A6834DD2CACEA2200F8F504 /* NetworkMonitorServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6834D92CACEA2200F8F504 /* NetworkMonitorServiceProtocol.swift */; };
 		6A6834E02CACEA7100F8F504 /* CatFactResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6834DF2CACEA7100F8F504 /* CatFactResult.swift */; };
 		6A6834E22CACEA7800F8F504 /* CatImageResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6834E12CACEA7800F8F504 /* CatImageResult.swift */; };
+		6A6834E42CACFB8F00F8F504 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6834E32CACFB8F00F8F504 /* Gradient.swift */; };
+		6A6834E72CAD040900F8F504 /* SplashScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A6834E62CAD040900F8F504 /* SplashScreen.storyboard */; };
+		6A6834E92CAD041800F8F504 /* SplashScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A6834E82CAD041800F8F504 /* SplashScreenController.swift */; };
+		6A6834EE2CAD051600F8F504 /* CatMeowLottie.json in Resources */ = {isa = PBXBuildFile; fileRef = 6A6834ED2CAD051600F8F504 /* CatMeowLottie.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +84,10 @@
 		6A6834D92CACEA2200F8F504 /* NetworkMonitorServiceProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkMonitorServiceProtocol.swift; sourceTree = "<group>"; };
 		6A6834DF2CACEA7100F8F504 /* CatFactResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatFactResult.swift; sourceTree = "<group>"; };
 		6A6834E12CACEA7800F8F504 /* CatImageResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatImageResult.swift; sourceTree = "<group>"; };
+		6A6834E32CACFB8F00F8F504 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
+		6A6834E62CAD040900F8F504 /* SplashScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SplashScreen.storyboard; sourceTree = "<group>"; };
+		6A6834E82CAD041800F8F504 /* SplashScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenController.swift; sourceTree = "<group>"; };
+		6A6834ED2CAD051600F8F504 /* CatMeowLottie.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = CatMeowLottie.json; sourceTree = "<group>"; };
 		95FA46AF2535A454ECB7DB3D /* Pods-RandomCatApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCatApp.debug.xcconfig"; path = "Target Support Files/Pods-RandomCatApp/Pods-RandomCatApp.debug.xcconfig"; sourceTree = "<group>"; };
 		C87E7313534BFDB49612091F /* Pods-RandomCatAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCatAppTests.debug.xcconfig"; path = "Target Support Files/Pods-RandomCatAppTests/Pods-RandomCatAppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CD2E124A178A5A19A76E6031 /* Pods-RandomCatAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomCatAppTests.release.xcconfig"; path = "Target Support Files/Pods-RandomCatAppTests/Pods-RandomCatAppTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -205,6 +213,7 @@
 		6A5D6BC92CABE88E0071AB5B /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6A6834EA2CAD04F800F8F504 /* Lottie */,
 				6A5D6B9F2CABE6EA0071AB5B /* Assets.xcassets */,
 			);
 			path = Resources;
@@ -275,6 +284,7 @@
 		6A6834BB2CAC193B00F8F504 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				6A6834E52CAD03C600F8F504 /* SplashScreen */,
 				6A6834BC2CAC194700F8F504 /* CatDetails */,
 			);
 			path = Scenes;
@@ -304,6 +314,7 @@
 			children = (
 				6A6834C22CAC19EA00F8F504 /* R-Swift */,
 				6A6834C32CAC19EA00F8F504 /* Closures.swift */,
+				6A6834E32CACFB8F00F8F504 /* Gradient.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -324,6 +335,23 @@
 				6A6834D42CACE85F00F8F504 /* RandomCatServiceProtocol.swift */,
 			);
 			path = RandomCat;
+			sourceTree = "<group>";
+		};
+		6A6834E52CAD03C600F8F504 /* SplashScreen */ = {
+			isa = PBXGroup;
+			children = (
+				6A6834E62CAD040900F8F504 /* SplashScreen.storyboard */,
+				6A6834E82CAD041800F8F504 /* SplashScreenController.swift */,
+			);
+			path = SplashScreen;
+			sourceTree = "<group>";
+		};
+		6A6834EA2CAD04F800F8F504 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+				6A6834ED2CAD051600F8F504 /* CatMeowLottie.json */,
+			);
+			path = Lottie;
 			sourceTree = "<group>";
 		};
 		EE3560447C4AC4FE1517F987 /* Pods */ = {
@@ -450,7 +478,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A5D6BA02CABE6EA0071AB5B /* Assets.xcassets in Resources */,
+				6A6834E72CAD040900F8F504 /* SplashScreen.storyboard in Resources */,
 				6A5D6BA32CABE6EA0071AB5B /* Base in Resources */,
+				6A6834EE2CAD051600F8F504 /* CatMeowLottie.json in Resources */,
 				6A5D6B9E2CABE6E90071AB5B /* Base in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -606,11 +636,13 @@
 				6A6834C92CAC19EA00F8F504 /* Closures.swift in Sources */,
 				6A6834D12CACE0CB00F8F504 /* CatModel.swift in Sources */,
 				6A6834C82CAC19EA00F8F504 /* R.generated.swift in Sources */,
+				6A6834E42CACFB8F00F8F504 /* Gradient.swift in Sources */,
 				6A6834D52CACE85F00F8F504 /* RandomCatServiceProtocol.swift in Sources */,
 				6A5D6B9B2CABE6E90071AB5B /* CatDetailsController.swift in Sources */,
 				6A5D6BCC2CABE8B50071AB5B /* App.swift in Sources */,
 				6A6834D72CACE86700F8F504 /* RandomCatService.swift in Sources */,
 				6A6834E22CACEA7800F8F504 /* CatImageResult.swift in Sources */,
+				6A6834E92CAD041800F8F504 /* SplashScreenController.swift in Sources */,
 				6A5D6B972CABE6E90071AB5B /* AppDelegate.swift in Sources */,
 				6A6834DD2CACEA2200F8F504 /* NetworkMonitorServiceProtocol.swift in Sources */,
 				6A6834BE2CAC195700F8F504 /* CatDetailsViewModel.swift in Sources */,
@@ -804,6 +836,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -833,6 +866,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

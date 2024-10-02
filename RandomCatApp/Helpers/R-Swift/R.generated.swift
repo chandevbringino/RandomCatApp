@@ -14,12 +14,16 @@ struct _R {
   let bundle: Foundation.Bundle
   var color: color { .init(bundle: bundle) }
   var info: info { .init(bundle: bundle) }
+  var file: file { .init(bundle: bundle) }
   var storyboard: storyboard { .init(bundle: bundle) }
 
   func color(bundle: Foundation.Bundle) -> color {
     .init(bundle: bundle)
   }
   func info(bundle: Foundation.Bundle) -> info {
+    .init(bundle: bundle)
+  }
+  func file(bundle: Foundation.Bundle) -> file {
     .init(bundle: bundle)
   }
   func storyboard(bundle: Foundation.Bundle) -> storyboard {
@@ -59,11 +63,20 @@ struct _R {
     }
   }
 
-  /// This `_R.storyboard` struct is generated, and contains static references to 2 storyboards.
+  /// This `_R.file` struct is generated, and contains static references to 1 resource files.
+  struct file {
+    let bundle: Foundation.Bundle
+
+    /// Resource file `CatMeowLottie.json`.
+    var catMeowLottieJson: RswiftResources.FileResource { .init(name: "CatMeowLottie", pathExtension: "json", bundle: bundle, locale: LocaleReference.none) }
+  }
+
+  /// This `_R.storyboard` struct is generated, and contains static references to 3 storyboards.
   struct storyboard {
     let bundle: Foundation.Bundle
     var catDetails: catDetails { .init(bundle: bundle) }
     var launchScreen: launchScreen { .init(bundle: bundle) }
+    var splashScreen: splashScreen { .init(bundle: bundle) }
 
     func catDetails(bundle: Foundation.Bundle) -> catDetails {
       .init(bundle: bundle)
@@ -71,9 +84,13 @@ struct _R {
     func launchScreen(bundle: Foundation.Bundle) -> launchScreen {
       .init(bundle: bundle)
     }
+    func splashScreen(bundle: Foundation.Bundle) -> splashScreen {
+      .init(bundle: bundle)
+    }
     func validate() throws {
       try self.catDetails.validate()
       try self.launchScreen.validate()
+      try self.splashScreen.validate()
     }
 
 
@@ -101,6 +118,19 @@ struct _R {
       let name = "LaunchScreen"
       func validate() throws {
 
+      }
+    }
+
+    /// Storyboard `SplashScreen`.
+    struct splashScreen: RswiftResources.StoryboardReference {
+      let bundle: Foundation.Bundle
+
+      let name = "SplashScreen"
+
+      var splashScreenController: RswiftResources.StoryboardViewControllerIdentifier<SplashScreenController> { .init(identifier: "SplashScreenController", storyboard: name, bundle: bundle) }
+
+      func validate() throws {
+        if splashScreenController() == nil { throw RswiftResources.ValidationError("[R.swift] ViewController with identifier 'splashScreenController' could not be loaded from storyboard 'SplashScreen' as 'SplashScreenController'.") }
       }
     }
   }
