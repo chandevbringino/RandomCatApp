@@ -36,7 +36,7 @@ public class Gradient: UIView {
         gradientLayer.colors = [startColor.cgColor, endColor.cgColor]
     }
     override public func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollection.changedTraits(from: previousTraitCollection)
+        let _ = super.traitCollection.changedTraits(from: previousTraitCollection)
         updatePoints()
         updateLocations()
         updateColors()
