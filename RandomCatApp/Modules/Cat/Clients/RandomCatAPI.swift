@@ -23,8 +23,9 @@ extension RandomCatAPI {
             do {
                 let results = try await fetchCat()
                 let catImageUrl = URL(string: results.1.first?.url ?? "")
+                let fact = results.0.data.first ?? ""
                 let cat = CatModel(
-                    fact: results.0.data[0],
+                    fact: fact,
                     imageUrl: catImageUrl
                 )
                 onSuccess(cat)
