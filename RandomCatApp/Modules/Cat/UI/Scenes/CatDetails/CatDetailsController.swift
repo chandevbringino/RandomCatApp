@@ -29,7 +29,23 @@ extension CatDetailsController {
 
 private extension CatDetailsController {
     func setup() {
+        setupImageView()
+        setupGesture()
+        
         fetchCatDetails()
+    }
+    
+    func setupImageView() {
+        catImageView.layer.cornerRadius = 8
+    }
+    
+    func setupGesture() {
+        let tapGesture = UITapGestureRecognizer(
+            target: self,
+            action: #selector(mainViewTapped)
+        )
+        tapGesture.numberOfTapsRequired = 1
+        view.addGestureRecognizer(tapGesture)
     }
 }
 
@@ -41,6 +57,15 @@ private extension CatDetailsController {
             self.catImageView.kf.setImage(with: self.viewModel.catImageURL)
             self.catFactLabel.text = self.viewModel.catFact
         }
+    }
+}
+
+// MARK: - Actions
+
+private extension CatDetailsController {
+    @objc
+    func mainViewTapped() {
+        fetchCatDetails()
     }
 }
 
