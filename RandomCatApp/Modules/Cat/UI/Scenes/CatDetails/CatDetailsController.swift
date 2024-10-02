@@ -110,10 +110,12 @@ private extension CatDetailsController {
         { [weak self] error in
             guard let self else { return }
             SVProgressHUD.dismiss()
-            self.showAlertMessage(
-                title: "Error",
-                message: error.localizedDescription
-            )
+            DispatchQueue.main.async {
+                self.showAlertMessage(
+                    title: "Error",
+                    message: error.localizedDescription
+                )
+            }
         }
     }
 }
