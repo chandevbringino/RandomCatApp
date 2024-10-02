@@ -7,6 +7,7 @@ target 'RandomCatApp' do
 
   # Pods for RandomCatApp
 
+  pod 'Alamofire', '~> 5.9.1'
   pod 'Kingfisher', '~> 7.0'
   pod 'R.swift', '~> 7.3.2'
   pod 'SVProgressHUD', '~> 2.3.1'
