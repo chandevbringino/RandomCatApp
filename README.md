@@ -11,10 +11,10 @@ The RandomCat is a fun and informative mobile application that delivers random, 
 - Standard Folder Structure
 - Service Classes and Helpers
 - Singleton
+- Async / Await
 
 ### Libraries and Frameworks via Cocoapods
 - R.swift
 - Kingfisher
 - lottie-ios
 - SVProgressHUD
-- Alamofire
